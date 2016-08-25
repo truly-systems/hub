@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+ <html lang="en">
 
     <!-- START @HEAD -->
     <head>
         <!-- START @META SECTION -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Blankon is a theme fullpack admin template powered by Twitter bootstrap 3 front-end framework. Included are multiple example pages, elements styles, and javascript widgets to get your project started.">
-        <meta name="keywords" content="admin, admin template, bootstrap3, clean, fontawesome4, good documentation, lightweight admin, responsive dashboard, webapp">
-        <meta name="author" content="Djava UI">
-        <title>DASHBOARD | BLANKON - Fullpack Admin Theme</title>
+       
+        <title>HUB | Truly</title>
         <!--/ END META SECTION -->
 
         <!-- START @FAVICONS -->
-        <link href="http://themes.djavaui.com/blankon-fullpack-admin-theme/img/ico/html/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="http://themes.djavaui.com/blankon-fullpack-admin-theme/img/ico/html/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="http://themes.djavaui.com/blankon-fullpack-admin-theme/img/ico/html/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="http://themes.djavaui.com/blankon-fullpack-admin-theme/img/ico/html/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
-        <link href="http://themes.djavaui.com/blankon-fullpack-admin-theme/img/ico/html/apple-touch-icon.png" rel="shortcut icon">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed">
+        <link href="img/truly.ico" rel="shortcut icon">
         <!--/ END FAVICONS -->
 
         <!-- START @FONT STYLES -->
@@ -123,7 +119,7 @@
 
                         <!-- Start brand -->
                         <a id="tour-1" class="navbar-brand" href="dashboard.html">
-                            <img class="logo" src="http://img.djavaui.com/?create=175x50,81B71A?f=ffffff" alt="brand logo">
+                            <img class="logo" src="img/truly.png" width="175" height="50" alt="brand logo">
                         </a><!-- /.navbar-brand -->
                         <!--/ End brand -->
 
@@ -162,7 +158,7 @@
                                 <a href="#" class="trigger-search"><i class="fa fa-search"></i></a>
                                 <form id="tour-3" class="navbar-form">
                                     <div class="form-group has-feedback">
-                                        <input type="text" class="form-control typeahead rounded" placeholder="Search for people, places and things">
+                                        <input type="text" class="form-control typeahead rounded" placeholder="Procurar...">
                                         <button type="submit" class="btn btn-theme fa fa-search form-control-feedback rounded"></button>
                                     </div>
                                 </form>
@@ -424,9 +420,10 @@
                         <!--/ End profile -->
 
                         <!-- Start settings -->
-                        <li id="tour-7" class="navbar-setting pull-right">
+                       <!--  <li id="tour-7" class="navbar-setting pull-right">
                             <a href="javascript:void(0);"><i class="fa fa-cog fa-spin"></i></a>
-                        </li><!-- /.navbar-setting pull-right -->
+                        </li> -->
+                        <!-- /.navbar-setting pull-right -->
                         <!--/ End settings -->
 
                         </ul>
@@ -459,7 +456,7 @@
                     <div class="media">
                         <a class="pull-left has-notif avatar" href="page-profile.html">
                             <img src="http://img.djavaui.com/?create=50x50,4888E1?f=ffffff" alt="admin">
-                            <i class="online"></i>
+                            <!-- <i class="online"></i> -->
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Hello, <span>Lee</span></h4>
@@ -481,14 +478,7 @@
                             <span class="selected"></span>
                         </a>
                         <ul>
-                            <li class="active"><a href="dashboard.html">Basic</a></li>
-                            <li><a href="dashboard-ecommerce.html">E-Commerce</a></li>
-                            <li><a href="dashboard-hr.html">Human resources</a></li>
-                            <li><a href="dashboard-investor.html">Investor</a></li>
-                            <li><a href="dashboard-marketing-campaign.html">Marketing campaign</a></li>
-                            <li><a href="dashboard-projects.html">Projects</a></li>
-                            <li><a href="dashboard-real-estate.html">Real estate</a></li>
-                            <li><a href="dashboard-retail-analysis.html">Retail analysis</a></li>
+                            <li class="active"><a href="dashboard.html">Home</a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - dashboard -->
@@ -1063,217 +1053,42 @@
                     <div id="tour-12" class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="mini-stat clearfix bg-facebook rounded">
-                                <span class="mini-stat-icon"><i class="fa fa-facebook fg-facebook"></i></span>
+                                <span class="mini-stat-icon"><i class="fa fa-check fg-facebook"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">5,762</span>
-                                    Facebook Like
+                                    <span class="counter">10</span>
+                                    Chamados Abertos
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="mini-stat clearfix bg-twitter rounded">
-                                <span class="mini-stat-icon"><i class="fa fa-twitter fg-twitter"></i></span>
+                                <span class="mini-stat-icon"><i class="fa fa-bullhorn fg-twitter"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">7,153</span>
-                                    Twitter Followers
+                                    <span class="counter">11</span>
+                                    Mudanças Abertas
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="mini-stat clearfix bg-googleplus rounded">
-                                <span class="mini-stat-icon"><i class="fa fa-google-plus fg-googleplus"></i></span>
+                                <span class="mini-stat-icon"><i class="fa fa-bug fg-googleplus"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">793</span>
-                                    Google+ Posts
+                                    <span class="counter">13</span>
+                                    Ploblemas Abertos
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="mini-stat clearfix bg-bitbucket rounded">
-                                <span class="mini-stat-icon"><i class="fa fa-bitbucket fg-bitbucket"></i></span>
+                                <span class="mini-stat-icon"><i class="fa fa-check fg-bitbucket"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">8,932</span>
-                                    Repository
+                                    <span class="counter">15</span>
+                                    Chamados Fechados
                                 </div>
                             </div>
                         </div>
                     </div><!-- /.row -->
-                    <div class="row">
-                        <div class="col-md-9">
-
-                            <!-- Start widget visitor chart -->
-                            <div id="tour-13" class="panel stat-stack widget-visitor rounded shadow">
-                                <div class="panel-body no-padding br-3">
-                                    <div class="row row-merge">
-                                        <div class="col-sm-8">
-                                            <div class="panel panel-theme stat-left no-margin no-box-shadow">
-                                                <div class="panel-heading no-border">
-                                                    <div class="pull-left">
-                                                        <h3 class="panel-title">Daily Visitor</h3>
-                                                    </div><!-- /.pull-left -->
-                                                    <div class="pull-right">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-sm btn-theme dropdown-toggle no-border" data-toggle="dropdown">
-                                                                Duration <span class="caret"></span>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-right no-border">
-                                                                <li class="dropdown-header">Select duration :</li>
-                                                                <li><a href="#">Year</a></li>
-                                                                <li><a href="#">Month</a></li>
-                                                                <li><a href="#">Week</a></li>
-                                                                <li><a href="#">Day</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div><!-- /.pull-right -->
-                                                    <div class="clearfix"></div>
-                                                </div><!-- /.panel-heading -->
-                                                <div class="panel-body bg-theme">
-
-                                                    <div id="visitor-chart" class="resize-chart"></div>
-
-                                                </div><!-- /.panel-body -->
-                                                <div class="panel-footer no-border-top">
-                                                    <div class="row text-center">
-                                                        <div class="col-xs-4 col-xs-override border-right dotted">
-                                                            <p class="text-danger text-strong mb-0">- 5%</p>
-                                                            <p class="h3 text-strong mb-0 mt-10 counter-visit" data-counter="7341">7,341</p>
-                                                            <p class="text-muted">Visits Today</p>
-                                                        </div>
-                                                        <div class="col-xs-4 col-xs-override border-right dotted">
-                                                            <p class="text-success text-strong mb-0">+ 32%</p>
-                                                            <p class="h3 text-strong mb-0 mt-10 counter-unique" data-counter="23762">23,762</p>
-                                                            <p class="text-muted">Unique Visitors</p>
-                                                        </div>
-                                                        <div class="col-xs-4 col-xs-override">
-                                                            <p class="text-success text-strong mb-0">+ 76%</p>
-                                                            <p class="h3 text-strong mb-0 mt-10 counter-page" data-counter="70112">70,112</p>
-                                                            <p class="text-muted">Page Views</p>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.panel-footer -->
-                                            </div><!-- /.panel -->
-                                        </div><!-- /.col-sm-8 -->
-                                        <div class="col-sm-4">
-                                            <div class="panel stat-right no-margin no-box-shadow">
-                                                <div class="panel-body">
-                                                    <h4 class="no-margin">Server Status</h4>
-                                                    <p class="text-muted">Summary of the server status.</p>
-
-                                                    <span>Domains</span><span class="pull-right">(7/10)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-lilac" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                                    </div><!-- /.progress -->
-
-                                                    <span>Databases</span><span class="pull-right">(45/100)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-teal" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
-                                                    </div><!-- /.progress -->
-
-                                                    <span>Email Account</span><span class="pull-right">(30/50)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-                                                    </div><!-- /.progress -->
-
-                                                    <span>Memory Usage</span><span class="pull-right">(45.2%)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
-                                                    </div><!-- /.progress -->
-
-                                                    <span>Disk Usage</span><span class="pull-right">(68.2%)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%"></div>
-                                                    </div><!-- /.progress -->
-
-                                                    <span>CPU Usage</span><span class="pull-right">(35.05 - 30 cpus)</span>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>
-                                                    </div><!-- /.progress -->
-                                                </div><!-- /.panel-body -->
-                                                <div class="panel-footer">
-                                                    <div id="realtime-status-chart" class="resize-chart"></div>
-                                                </div>
-                                            </div><!-- /.panel -->
-                                        </div><!-- /.col-sm-4 -->
-                                    </div><!-- /.row -->
-                                </div><!-- /.panel-body -->
-                            </div><!-- /.panel -->
-                            <!--/ End widget visitor chart -->
-
-                        </div>
-                        <div class="col-md-3">
-
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-4 col-xs-12">
-
-                                    <!-- Start weather widget -->
-                                    <div id="tour-14" class="widget-wrapper bg-theme rounded">
-                                        <div class="weather-current-city">
-                                            <img src="http://img.djavaui.com/?create=250x125,A90329" alt="..."/>
-                                            <div class="row">
-                                                <div class="col-md-8 col-sm-8 col-xs-8">
-                                                            <span class="current-city">
-                                                                Yogyakarta, ID
-                                                            </span>
-                                                            <span class="current-temp">
-                                                                27&deg;C
-                                                            </span>
-                                                </div><!-- /.col-md-7 -->
-                                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                                            <span class="current-day-icon">
-                                                              <canvas id="partly-cloudy-day" width="60" height="60"></canvas>
-                                                            </span>
-                                                </div><!-- /.col-md-5 -->
-                                            </div><!-- /.row -->
-                                            <span class="current-day"> Monday, 8 December </span>
-                                        </div><!-- /.weather-current-city -->
-                                        <div class="row">
-                                            <ul class="days">
-                                                <li class="col-md-4 col-sm-4 col-xs-4">
-                                                    <strong>Tue</strong>
-                                                    <canvas id="snow" width="45" height="45"></canvas>
-                                                    <span>20°</span>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-xs-4"><strong>Fri</strong>
-                                                    <canvas id="rain" width="45" height="45"></canvas>
-                                                    <span>18°</span>
-                                                </li>
-                                                <li class="col-md-4 col-sm-4 col-xs-4"><strong>Sat</strong>
-                                                    <canvas id="sleet" width="45" height="45"></canvas>
-                                                    <span>24°</span>
-                                                </li>
-                                            </ul><!-- /.days -->
-                                        </div><!-- /.row -->
-                                    </div><!-- /.widget-wrapper -->
-                                    <!--/ End weather widget -->
-
-                                    <div class="divider"></div>
-
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">
-
-                                    <!-- Start blog post widget -->
-                                    <div id="tour-15" class="blog-item blog-quote rounded shadow">
-                                        <div class="quote quote-lilac">
-                                            <a href="page-blog-single.html">
-                                                Stay Hungry, Stay Foolish
-                                                <small class="quote-author">- Steve Jobs -</small>
-                                            </a>
-                                        </div>
-                                        <div class="blog-details">
-                                            <ul class="blog-meta">
-                                                <li>By: <a href="">Djava UI</a></li>
-                                                <li>Jun 08, 2014</li>
-                                                <li><a href="">2 Comments</a></li>
-                                            </ul>
-                                        </div><!-- blog-details -->
-                                    </div><!-- blog-item -->
-                                    <!--/ End blog post widget -->
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- /.row -->
+                    
                     <div class="row">
                         <div class="col-md-9">
 
@@ -1421,16 +1236,6 @@
                             </div><!-- /.table-responsive -->
                             <!--/ End sample table -->
 
-                            <!-- Start dropzone js -->
-                            <div id="tour-18">
-                                <form id="my-dropzone" action="assets/admin/data" class="dropzone mb-20 rounded">
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple />
-                                    </div>
-                                </form>
-                            </div>
-                            <!--/ End dropzone js -->
-
                         </div>
                         <div class="col-md-3">
 
@@ -1441,13 +1246,13 @@
                                     <div class="panel rounded shadow">
                                         <div class="panel-heading text-center bg-youtube">
                                             <p class="inner-all no-margin">
-                                                <i class="fa fa-youtube fa-5x"></i>
+                                                <i class="fa fa-question fa-5x"></i>
                                             </p>
                                         </div><!-- /.panel-heading -->
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
-                                                <span class="block counter">342</span>
-                                                <span class="block">Videos</span>
+                                                <!-- <span class="block counter">342</span> -->
+                                                <span class="block">Sobre a Truly</span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
@@ -1458,35 +1263,19 @@
                                     <div class="panel rounded shadow">
                                         <div class="panel-heading text-center bg-dribbble">
                                             <p class="inner-all no-margin">
-                                                <i class="fa fa-dribbble fa-5x"></i>
+                                                <i class="fa fa-tty fa-5x"></i>
                                             </p>
                                         </div><!-- /.panel-heading -->
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
-                                                <span class="block counter">2,341</span>
-                                                <span class="block">Designs</span>
+                                                <!-- <span class="block counter">2,341</span> -->
+                                                <span class="block">Atendimento</span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
 
                                 </div>
-                                <div class="col-md-12 col-sm-4 col-xs-4 col-xs-override">
-
-                                    <div class="panel rounded shadow">
-                                        <div class="panel-heading text-center bg-soundcloud">
-                                            <p class="inner-all no-margin">
-                                                <i class="fa fa-soundcloud fa-5x"></i>
-                                            </p>
-                                        </div><!-- /.panel-heading -->
-                                        <div class="panel-body text-center">
-                                            <p class="h4 no-margin inner-all text-strong">
-                                                <span class="block counter">34,282</span>
-                                                <span class="block">Musics</span>
-                                            </p>
-                                        </div><!-- /.panel-body -->
-                                    </div><!-- /.panel -->
-
-                                </div>
+                               
                             </div>
 
                             <!--/ End mini stats social widget -->
@@ -2253,7 +2042,7 @@
         <!--/ END BACK TOP -->
 
         <!-- START @ADDITIONAL ELEMENT -->
-        <div class="modal modal-success fade" id="modal-bootstrap-tour" tabindex="-1" role="dialog">
+       <!--  <div class="modal modal-success fade" id="modal-bootstrap-tour" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document" style="margin: 150px auto;">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -2278,7 +2067,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="modal modal-success fade" id="modal-bootstrap-tour-new-features" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document" style="margin: 150px auto;">
@@ -2420,19 +2209,7 @@
         <!--/ END PAGE LEVEL SCRIPTS -->
         <!--/ END JAVASCRIPT SECTION -->
 
-        <!-- START GOOGLE ANALYTICS -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-55892530-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-        <!--/ END GOOGLE ANALYTICS -->
-
+       
     </body>
     <!--/ END BODY -->
 
