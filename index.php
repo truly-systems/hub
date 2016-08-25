@@ -2207,9 +2207,7 @@
         <script src="assets/admin/js/pages/blankon.dashboard.js"></script>
         <script src="assets/admin/js/demo.js"></script>
         <!--/ END PAGE LEVEL SCRIPTS -->
-        <!--/ END JAVASCRIPT SECTION -->
-
-       
+        <!--/ END JAVASCRIPT SECTION --> 
     </body>
     <!--/ END BODY -->
 
