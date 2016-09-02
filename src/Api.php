@@ -68,9 +68,10 @@ class Api
 		$cnt = count($ticket);
 		$aberto = 0;
 		for ($i=0; $i < $cnt; $i++) { 
-			if ($ticket[$i]->status != 5 or $ticket[$i]->status != 6 ) {
+			if ($ticket[$i]->status != '6' and $ticket[$i]->status != '5' ) {
 				$aberto++;
 			}
+			
 		}
 		return $aberto;
 	}
@@ -92,8 +93,8 @@ class Api
 		$cnt = count($problem);
 		$aberto = 0;
 		for ($i=0; $i < $cnt; $i++) { 
-			if ($problem[$i]->status != 5 or $problem[$i]->status != 6 ) {
-				$aberto++;
+			if ($problem[$i]->status != '6' and $problem[$i]->status != '5' ) {
+				$aberto ++;
 			}
 		}
 		return $aberto;

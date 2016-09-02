@@ -1,3 +1,10 @@
+<?php
+include 'src/Api.php';
+
+$api = new Api("http://localhost/glpi", "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql", "glpi", "glpi");
+$token_session =  $api->getSessionToken($api->initSession());
+
+?>
 <!DOCTYPE html>
  <html lang="en">
 
@@ -1055,7 +1062,11 @@
                             <div class="mini-stat clearfix bg-facebook rounded">
                                 <span class="mini-stat-icon"><i class="fa fa-check fg-facebook"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">10</span>
+                                    <span class="counter">
+                                        <?php
+                                            echo $api->countTicketOpen(json_decode($api->getTicket($token_session)));
+                                        ?>
+                                    </span>
                                     Chamados Abertos
                                 </div>
                             </div>
@@ -1073,7 +1084,11 @@
                             <div class="mini-stat clearfix bg-googleplus rounded">
                                 <span class="mini-stat-icon"><i class="fa fa-bug fg-googleplus"></i></span>
                                 <div class="mini-stat-info">
-                                    <span class="counter">13</span>
+                                    <span class="counter">
+                                        <?php
+                                            echo $api->countProblemOpen(json_decode($api->getProblem($token_session)));
+                                        ?>
+                                    </span>
                                     Ploblemas Abertos
                                 </div>
                             </div>
