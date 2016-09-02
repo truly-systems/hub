@@ -63,6 +63,43 @@ class Api
 		return $this->curlBase($url, $cab);
 	}
 
+	public function countTicketOpen($ticket)
+	{
+		$cnt = count($ticket);
+		$aberto = 0;
+		for ($i=0; $i < $cnt; $i++) { 
+			if ($ticket[$i]->status != 5 or $ticket[$i]->status != 6 ) {
+				$aberto++;
+			}
+		}
+		return $aberto;
+	}
+
+	public function getProblem($token_session)
+	{
+		$url = $this->host . "/apirest.php/Problem";
+		$cab = array(
+                    "Content-Type: application/json",
+                    "Session-Token: " . $token_session . "",
+                    "App-Token: " . $this->appToken . ""
+                    );
+
+		return $this->curlBase($url, $cab);
+	}
+
+	public function countProblemOpen($problem)
+	{
+		$cnt = count($problem);
+		$aberto = 0;
+		for ($i=0; $i < $cnt; $i++) { 
+			if ($problem[$i]->status != 5 or $problem[$i]->status != 6 ) {
+				$aberto++;
+			}
+		}
+		return $aberto;
+	}
+
+
 	public function curlBase($url, $cab)
 	{
 		$curl = curl_init();
