@@ -138,12 +138,25 @@ var BlankonSign = function () {
                                 ion.sound.play("cd_tray");
                             }
                             btn.attr('disabled', 'disabled');
-                            setTimeout(function() {
-                                btn.text('Great MR AWESOME !');
-                            }, 2000);
+                            // setTimeout(function() {
+                            //     btn.text('Great MR AWESOME !');
+                            // }, 2000);
                             btn.removeAttr('disabled');
                             setTimeout(function () {
-                                form.submit();
+                                //form.submit();
+                                
+                                var username = $("#username").val();
+                                var password = $("#password").val();
+                                 
+                                $.post('post.php?tipo=login', 
+                                    { username: username, password: password}, 
+                                function(resposta) {
+                                        
+                                    if (resposta != false) { 
+                                        $("#msgResposta").html(resposta); 
+                                    } 
+                                }); 
+
                             }, 2500);
                         }
                     }

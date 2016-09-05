@@ -22,6 +22,8 @@ class Api
 
 	public function initSession()
 	{
+		$erro = "0";
+		$return_token = "";
 		$url = $this->host . "/apirest.php/initSession";
 		$cab = array(
                     "Content-Type: application/json",
@@ -29,13 +31,21 @@ class Api
                     "App-Token: " . $this->appToken . ""
                     );
 
-		return $this->curlBase($url, $cab);
+		$return = $this->curlBase($url, $cab);
+
+		if (isset($return["ERROR_GLPI_LOGIN"])) {
+			$erro = "1";
+		}
+		else {
+			$return_token = $return["session_token"];
+		}
+		return array("session_token" => $return_token, "erro" => $erro);
 	}
 
 	public function getSessionToken($valor)
 	{
-		$valor = json_decode($valor);
-		return $valor->session_token;
+		//$valor = json_decode($valor);
+		return $valor["session_token"];
 	}
 
 	public function getFullSession($token_session)
