@@ -1,8 +1,9 @@
 <?php
+session_start();
 include 'src/Api.php';
+include 'config.php';
 
-$api = new Api("http://localhost/glpi", "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql", "glpi", "glpi");
-$token_session =  $api->getSessionToken($api->initSession());
+$api = new Api($dados_api["host"], $dados_api["app_token"]);
 
 ?>
 <!DOCTYPE html>
@@ -1064,7 +1065,7 @@ $token_session =  $api->getSessionToken($api->initSession());
                                 <div class="mini-stat-info">
                                     <span class="counter">
                                         <?php
-                                            echo $api->countTicketOpen(json_decode($api->getTicket($token_session)));
+                                            echo $api->countTicketOpen(json_decode($api->getTicket($_SESSION["session_token"])));
                                         ?>
                                     </span>
                                     Chamados Abertos
@@ -1086,7 +1087,7 @@ $token_session =  $api->getSessionToken($api->initSession());
                                 <div class="mini-stat-info">
                                     <span class="counter">
                                         <?php
-                                            echo $api->countProblemOpen(json_decode($api->getProblem($token_session)));
+                                            echo $api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"])));
                                         ?>
                                     </span>
                                     Ploblemas Abertos

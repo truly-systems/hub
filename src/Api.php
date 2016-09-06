@@ -6,10 +6,14 @@ class Api
 {
 	private $valor;
 
-	public function __construct($host, $appToken, $user, $password)
+	public function __construct($host, $appToken)
 	{
 		$this->host = $host;
 		$this->appToken = $appToken;
+	}
+
+	public function init($user, $password)
+	{
 		$this->user = $user;
 		$this->password = $password;
 	}
@@ -32,13 +36,17 @@ class Api
                     );
 
 		$return = $this->curlBase($url, $cab);
+		$return = json_decode($return);
 
-		if (isset($return["ERROR_GLPI_LOGIN"])) {
-			$erro = "1";
+		if (!isset($return->session_token)) {
+			if ($return[0] == "ERROR_GLPI_LOGIN") {
+				$erro = "1";
+			}
 		}
 		else {
-			$return_token = $return["session_token"];
+			$return_token = $return->session_token;
 		}
+		
 		return array("session_token" => $return_token, "erro" => $erro);
 	}
 

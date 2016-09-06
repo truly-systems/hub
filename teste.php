@@ -1,26 +1,27 @@
 <?php
+session_start();
 include 'src/Api.php';
 
 
 // $app_token = "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql";
 // $user_token = "q24xm4b49hlntjb1s0k7bl38v5mnspeirhgelrht0";
 
-$api = new Api("http://localhost/glpi", "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql", "glpi", "glpi");
+$api = new Api("http://localhost/glpi", "w4xp74y3aa59n9d1hollryxb7n34ce80i6zp0yrk0", "glpi", "glpi");
 
 // echo "<pre>";
 // var_dump($api->initSession());
 // echo "</pre>";
 
 
-$token_session =  $api->getSessionToken($api->initSession());
-
+//$token_session =  $api->getSessionToken($api->initSession());
+echo "dd:" . $_SESSION["session_token"];
 
 echo "<pre>";
-// print_r(json_decode($api->getProblem($token_session)));
-// print_r($api->countProblemOpen(json_decode($api->getProblem($token_session))));
+ print_r(json_decode($api->getProblem($_SESSION["session_token"])));
+print_r($api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"]))));
 
-print_r(json_decode($api->getTicket($token_session)));
-print_r($api->countTicketOpen(json_decode($api->getTicket($token_session))));
+//print_r(json_decode($api->getTicket($_SESSION["session_token"])));
+//print_r($api->countTicketOpen(json_decode($api->getTicket($_SESSION["session_token"]))));
 echo "</pre>";
 
 
