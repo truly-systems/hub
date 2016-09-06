@@ -20,7 +20,7 @@ if ($tipo == "login") {
 			$_SESSION["session_token"] = $token;
 
 			echo "<script>$(document).ready(function() {
-					var novaURL = 'painel.php';
+					var novaURL = 'index.php';
 					$(window.document.location).attr('href',novaURL);
 				});</script>";
 		}
