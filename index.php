@@ -1033,7 +1033,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
                                                 <!-- <span class="block counter">342</span> -->
-                                                <span class="block">Sobre a Truly</span>
+                                                <span class="block"><a href="http://trulysystems.com/tsys/sobre-a-truly/" target="_blank">Sobre a Truly</a></span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
@@ -1050,7 +1050,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
                                                 <!-- <span class="block counter">2,341</span> -->
-                                                <span class="block">Atendimento</span>
+                                                <span class="block"><a href="http://tm.trulysystems.com" target="_blank">Atendimento</a></span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
