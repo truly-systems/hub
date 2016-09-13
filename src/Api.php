@@ -66,6 +66,54 @@ class Api
 
 	}
 
+	public function getMyProfiles($token_session)
+	{
+		$url = $this->host . "/apirest.php/getMyProfiles";
+		$cab = array(
+                    "Content-Type: application/json",
+                    "Session-Token: " . $token_session . "",
+                    "App-Token: " . $this->appToken . ""
+                    );
+
+		$return = $this->curlBase($url, $cab);
+		$return = json_decode($return);
+		
+		return $return;
+
+	}
+
+	public function getChangeActiveProfile($token_session)
+	{
+		$url = $this->host . "/apirest.php/changeActiveProfile";
+		$cab = array(
+                    "Content-Type: application/json",
+                    "Session-Token: " . $token_session . "",
+                    "App-Token: " . $this->appToken . ""
+                    );
+
+		$return = $this->curlBase($url, $cab);
+		$return = json_decode($return);
+		
+		return $return;
+
+	}
+
+	public function getMyEntities($token_session)
+	{
+		$url = $this->host . "/apirest.php/getMyEntities";
+		$cab = array(
+                    "Content-Type: application/json",
+                    "Session-Token: " . $token_session . "",
+                    "App-Token: " . $this->appToken . ""
+                    );
+
+		$return = $this->curlBase($url, $cab);
+		$return = json_decode($return);
+		
+		return $return;
+
+	}
+
 	public function getActiveProfileName($return)
 	{
 		return $return->glpiactiveprofile->name;

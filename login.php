@@ -130,7 +130,9 @@
                     </div><!-- /.form-group -->
                     <div class="form-group">
                         <button type="submit" class="btn btn-theme btn-lg btn-block no-margin rounded" id="login-btn">Entrar</button>
-                        <div id="msgResposta"></div>
+
+                        <div id="msgResposta" style="margin-top:5px;"></div>
+
                     </div><!-- /.form-group -->
                 </div><!-- /.sign-footer -->
             </form><!-- /.form-horizontal -->
@@ -149,7 +151,7 @@
         <script src="assets/global/plugins/bower_components/jquery-cookie/jquery.cookie.js"></script>
         <script src="assets/global/plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="assets/global/plugins/bower_components/jquery-easing-original/jquery.easing.1.3.min.js"></script>
-        <script src="assets/global/plugins/bower_components/ionsound/js/ion.sound.min.js"></script>
+
         <!--/ END CORE PLUGINS -->
 
         <!-- START @PAGE LEVEL PLUGINS -->
@@ -157,8 +159,7 @@
         <!--/ END PAGE LEVEL PLUGINS -->
 
         <!-- START @PAGE LEVEL SCRIPTS -->
-        <script src="assets/admin/js/pages/blankon.sign.js"></script>
-        <script src="assets/admin/js/demo.js"></script>
+        <script src="assets/admin/js/funcoes.js"></script>
         <!--/ END PAGE LEVEL SCRIPTS -->
         <!--/ END JAVASCRIPT SECTION -->
 

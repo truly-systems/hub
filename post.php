@@ -7,7 +7,13 @@ if ($tipo == "login") {
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 
-	if($username != "" and $password != ""){
+	if($username == ""){
+		echo "<div class='alert alert-danger'>Usuário em Branco!</div>";
+	}
+	elseif($password == ""){
+		echo "<div class='alert alert-danger'>Senha em Branco!</div>";
+	}
+	else {	
 
 		include 'src/Api.php';
 		include 'config.php';
@@ -24,5 +30,8 @@ if ($tipo == "login") {
 					$(window.document.location).attr('href',novaURL);
 				});</script>";
 		}
+		else{
+		    echo "<div class='alert alert-danger'>Login Inváldo!</div>";
+	    }
 	}
 }
