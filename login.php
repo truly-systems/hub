@@ -1,25 +1,34 @@
+<!DOCTYPE html>
+ <html lang="en">
 
+    <!-- START @HEAD -->
+    <head>
+        <!-- START @META SECTION -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+         <title>HUB | Truly</title>
 
         <!-- START @GLOBAL MANDATORY STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!--/ END GLOBAL MANDATORY STYLES -->
 
         <!-- START @PAGE LEVEL STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <!--/ END PAGE LEVEL STYLES -->
 
         <!-- START @THEME STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/reset.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/layout.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/components.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/plugins.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/themes/default.theme.css" rel="stylesheet" id="theme">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/pages/sign.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/custom.css" rel="stylesheet">
+        <link href="assets/admin/css/reset.css" rel="stylesheet">
+        <link href="assets/admin/css/layout.css" rel="stylesheet">
+        <link href="assets/admin/css/components.css" rel="stylesheet">
+        <link href="assets/admin/css/plugins.css" rel="stylesheet">
+        <link href="assets/admin/css/themes/default.theme.css" rel="stylesheet" id="theme">
+        <link href="assets/admin/css/pages/sign.css" rel="stylesheet">
+        <link href="assets/admin/css/custom.css" rel="stylesheet">
         <!--/ END THEME STYLES -->
 
-   
+    </head>
+    <body>
 
         <!-- START @SIGN WRAPPER -->
         <div id="sign-wrapper">
@@ -76,18 +85,20 @@
 
         <!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
         <!-- START @CORE PLUGINS -->
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-cookie/jquery.cookie.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-easing-original/jquery.easing.1.3.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-cookie/jquery.cookie.js"></script>
+        <script src="assets/global/plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-easing-original/jquery.easing.1.3.min.js"></script>
 
         <!--/ END CORE PLUGINS -->
 
         <!-- START @PAGE LEVEL PLUGINS -->
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
         <!--/ END PAGE LEVEL PLUGINS -->
 
         <!-- START @PAGE LEVEL SCRIPTS -->
-        <script src="<?php echo "http://$host/"; ?>assets/admin/js/funcoes.js"></script>
+        <script src="assets/admin/js/funcoes.js"></script>
         <!--/ END PAGE LEVEL SCRIPTS -->
         <!--/ END JAVASCRIPT SECTION -->
+        </body>
+        </html>

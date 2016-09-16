@@ -1,29 +1,18 @@
 <?php
 session_start();
-include 'src/Api.php';
-include 'config.php';
 
-$host = $_SERVER['HTTP_HOST'];
-
-if ($host == 'localhost') { $host = "$host/hub"; } else { $host = "$host"; }
-
-if(isset($_GET['cod'])){
-
-    $url = $_GET['cod'];
-
-    $exp = explode('/', $url);
-
-    $pgn = $exp[0];
-
+ if (isset($_GET["?"])) {
+   $pgn = $_GET["?"];
 }
 
-if ($_GET and $pgn == "action" and $exp[1] == "sair") {  //action/sair
+if ($_GET and isset($_GET["action"]) and $_GET["action"] == "sair") { 
     $_SESSION['session_token'] == "";
     session_destroy();
-    echo "<script>window.location='http://".$host."'</script>";
+    echo "<script>window.location='login.php'</script>";
 }
    
-
+include 'src/Api.php';
+include 'config.php';
 protecao();
 
 $api = new Api($dados_api["host"], $dados_api["app_token"]);
@@ -44,11 +33,11 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <!--/ END META SECTION -->
 
         <!-- START @FAVICONS -->
-        <link href="<?php echo "http://$host/"; ?>img/truly.ico" rel="apple-touch-icon-precomposed" sizes="144x144">
-        <link href="<?php echo "http://$host/"; ?>img/truly.ico" rel="apple-touch-icon-precomposed" sizes="114x114">
-        <link href="<?php echo "http://$host/"; ?>img/truly.ico" rel="apple-touch-icon-precomposed" sizes="72x72">
-        <link href="<?php echo "http://$host/"; ?>img/truly.ico" rel="apple-touch-icon-precomposed">
-        <link href="<?php echo "http://$host/"; ?>img/truly.ico" rel="shortcut icon">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="144x144">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="114x114">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed" sizes="72x72">
+        <link href="img/truly.ico" rel="apple-touch-icon-precomposed">
+        <link href="img/truly.ico" rel="shortcut icon">
         <!--/ END FAVICONS -->
 
         <!-- START @FONT STYLES -->
@@ -57,24 +46,24 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <!--/ END FONT STYLES -->
 
         <!-- START @GLOBAL MANDATORY STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!--/ END GLOBAL MANDATORY STYLES -->
 
         <!-- START @PAGE LEVEL STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/animate.css/animate.min.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/dropzone/downloads/css/dropzone.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery.gritter/css/jquery.gritter.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/dropzone/downloads/css/dropzone.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/jquery.gritter/css/jquery.gritter.css" rel="stylesheet">
+        <link href="assets/global/plugins/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
         <!--/ END PAGE LEVEL STYLES -->
 
         <!-- START @THEME STYLES -->
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/reset.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/layout.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/components.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/plugins.css" rel="stylesheet">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/themes/default.theme.css" rel="stylesheet" id="theme">
-        <link href="<?php echo "http://$host/"; ?>assets/admin/css/custom.css" rel="stylesheet">
+        <link href="assets/admin/css/reset.css" rel="stylesheet">
+        <link href="assets/admin/css/layout.css" rel="stylesheet">
+        <link href="assets/admin/css/components.css" rel="stylesheet">
+        <link href="assets/admin/css/plugins.css" rel="stylesheet">
+        <link href="assets/admin/css/themes/default.theme.css" rel="stylesheet" id="theme">
+        <link href="assets/admin/css/custom.css" rel="stylesheet">
         <!--/ END THEME STYLES -->
 
         <!-- START @IE SUPPORT -->
@@ -152,7 +141,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
                         <!-- Start brand -->
                         <a id="tour-1" class="navbar-brand" href="dashboard.html">
-                            <img class="logo" src="<?php echo "http://$host/"; ?>img/truly.png" width="175" height="50" alt="brand logo">
+                            <img class="logo" src="img/truly.png" width="175" height="50" alt="brand logo">
                         </a><!-- /.navbar-brand -->
                         <!--/ End brand -->
 
@@ -283,7 +272,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             </a>
                             <!-- Start dropdown menu -->
                             <ul class="dropdown-menu animated flipInX">
-                                <li><a href="<?php echo "http://$host/"; ?>action/sair"><i class="fa fa-sign-out"></i>Sair</a></li>
+                                <li><a href="index.php?action=sair"><i class="fa fa-sign-out"></i>Sair</a></li>
                             </ul>
                             <!--/ End dropdown menu -->
                         </li><!-- /.dropdown navbar-profile -->
@@ -324,7 +313,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                 <!-- Start left navigation - profile shortcut -->
                 <div id="tour-8" class="sidebar-content">
                     <div class="media">
-                        <a class="pull-left has-notif avatar" href="p#">
+                        <a class="pull-left has-notif avatar" href="#">
                             <!-- <img src="http://img.djavaui.com/?create=50x50,4888E1?f=ffffff" alt="admin"> -->
                             <!-- <i class="online"></i> -->
                         </a>
@@ -355,7 +344,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             <span class="selected"></span>
                         </a>
                         <ul>
-                            <li class="active"><a href="<?php echo "http://$host/"; ?>">Início</a></li>
+                            <li class="active"><a href="index.php">Início</a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - dashboard -->
@@ -368,7 +357,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             <span class="arrow"></span>
                         </a>
                         <ul>
-                            <li><a href="<?php echo "http://$host/"; ?>">Meus Dados</a></li>
+                            <li><a href="??=dados_pessoais">Meus Dados</a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - frontend themes -->
@@ -391,16 +380,15 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
             </aside><!-- /#sidebar-left -->
             <!--/ END SIDEBAR LEFT -->
-          <?php
-              if (isset($pgn) and is_file("_$pgn.php")) 
-              {
-                include("_$pgn.php");
-              }
-              else { 
-                include("_home.php"); 
-              } 
-          ?>
+         <?php 
 
+             if (isset($pgn) and is_file("_$pgn.php")) {
+               include("_$pgn.php");
+             }
+             else {
+               include("_home.php");
+             } 
+        ?>
          
 
         </section><!-- /#wrapper -->
@@ -416,38 +404,38 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
         <!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
         <!-- START @CORE PLUGINS -->
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-cookie/jquery.cookie.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/typehead.js/dist/handlebars.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/typehead.js/dist/typeahead.bundle.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-nicescroll/jquery.nicescroll.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery.sparkline.min/index.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery-easing-original/jquery.easing.1.3.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/ionsound/js/ion.sound.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootbox/bootbox.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-cookie/jquery.cookie.js"></script>
+        <script src="assets/global/plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/global/plugins/bower_components/typehead.js/dist/handlebars.js"></script>
+        <script src="assets/global/plugins/bower_components/typehead.js/dist/typeahead.bundle.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery.sparkline.min/index.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery-easing-original/jquery.easing.1.3.min.js"></script>
+        <script src="assets/global/plugins/bower_components/ionsound/js/ion.sound.min.js"></script>
+        <script src="assets/global/plugins/bower_components/bootbox/bootbox.js"></script>
         <!--/ END CORE PLUGINS -->
 
         <!-- START @PAGE LEVEL PLUGINS -->
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.spline.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.categories.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.tooltip.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.resize.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/flot/jquery.flot.pie.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/dropzone/downloads/dropzone.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/jquery.gritter/js/jquery.gritter.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/skycons-html5/skycons.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/counter-up/jquery.counterup.min.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/global/plugins/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+        <script src="assets/global/plugins/bower_components/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.spline.min.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.categories.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.resize.js"></script>
+        <script src="assets/global/plugins/bower_components/flot/jquery.flot.pie.js"></script>
+        <script src="assets/global/plugins/bower_components/dropzone/downloads/dropzone.min.js"></script>
+        <script src="assets/global/plugins/bower_components/jquery.gritter/js/jquery.gritter.min.js"></script>
+        <script src="assets/global/plugins/bower_components/skycons-html5/skycons.js"></script>
+        <script src="assets/global/plugins/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="assets/global/plugins/bower_components/counter-up/jquery.counterup.min.js"></script>
+        <script src="assets/global/plugins/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
         <!--/ END PAGE LEVEL PLUGINS -->
 
         <!-- START @PAGE LEVEL SCRIPTS -->
-        <script src="<?php echo "http://$host/"; ?>assets/admin/js/apps.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/admin/js/pages/blankon.dashboard.js"></script>
-        <script src="<?php echo "http://$host/"; ?>assets/admin/js/demo.js"></script>
+        <script src="assets/admin/js/apps.js"></script>
+        <script src="assets/admin/js/pages/blankon.dashboard.js"></script>
+        <script src="assets/admin/js/demo.js"></script>
         <!--/ END PAGE LEVEL SCRIPTS -->
         <!--/ END JAVASCRIPT SECTION --> 
     </body>
