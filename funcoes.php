@@ -1,13 +1,6 @@
 <?php
-define("LANG",'en_US');
-
-$dados_api = array(
-		"host" => "http://localhost/glpi",
-		"app_token" => "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql"  // DEV2
-		//"app_token" => "w4xp74y3aa59n9d1hollryxb7n34ce80i6zp0yrk0" // MAC
-	);
-
-function protecao(){
+function protecao()
+{
 
 	if(isset($_SESSION['session_token'])) { }
 	else
@@ -15,6 +8,13 @@ function protecao(){
 		echo "<script>window.location='login.php'</script>";
 	}
 
+}
+
+function checkInstall()
+{
+	if (!file_exists('inc/config.php')) {
+		echo "<script>window.location='_instalar/'</script>";
+	}
 }
 
 function convertDataView($data)

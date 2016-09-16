@@ -8,7 +8,7 @@ include 'src/Api.php';
 
 //$api = new Api("http://localhost/glpi", "w4xp74y3aa59n9d1hollryxb7n34ce80i6zp0yrk0", "glpi", "glpi");
 
-$api = new Api("http://localhost/glpi", "w4xp74y3aa59n9d1hollryxb7n34ce80i6zp0yrk0");
+$api = new Api("http://localhost/glpi", "o52xh7xoo7yjq62csasgnuek17cbv4sj9ugp2eeql");
 $api->init("glpi", "glpi");
 $return = $api->initSession();
 // echo "<pre>";
@@ -16,17 +16,20 @@ $return = $api->initSession();
 // echo "</pre>";
 
 
-//$token_session =  $api->getSessionToken($api->initSession());
-//echo "dd:" . $_SESSION["session_token"];
+$token_session =  $api->getSessionToken($api->initSession());
+echo "dd:" . $_SESSION["session_token"];
 
 echo "<pre>";
+
+print_r($token_session);
+
 //  print_r(json_decode($api->getProblem($_SESSION["session_token"])));
 // print_r($api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"]))));
 
 //print_r(json_decode($api->getTicket($_SESSION["session_token"])));
 //print_r($api->getTicketsContent($api->getTicket($_SESSION["session_token"])));
 
- print_r($api->getMyEntities($return["session_token"]));
+//print_r($api->getMyEntities($return["session_token"]));
 //print_r($api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"]))));
 
 echo "</pre>";

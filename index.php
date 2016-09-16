@@ -1,7 +1,10 @@
 <?php
 session_start();
 
- if (isset($_GET["?"])) {
+include 'funcoes.php';
+checkInstall();
+
+if (isset($_GET["?"])) {
    $pgn = $_GET["?"];
 }
 
@@ -12,7 +15,7 @@ if ($_GET and isset($_GET["action"]) and $_GET["action"] == "sair") {
 }
    
 include 'src/Api.php';
-include 'config.php';
+include 'inc/config.php';
 protecao();
 
 $api = new Api($dados_api["host"], $dados_api["app_token"]);

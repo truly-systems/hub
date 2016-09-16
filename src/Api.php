@@ -218,6 +218,29 @@ class Api
 		return $aberto;
 	}
 
+	public function test()
+	{
+		$status = 0;
+
+		$url = $this->host . "/apirest.php/initSession";
+		$cab = array(
+                    "Content-Type: application/json",
+                    "Authorization: " . $this->geraAuthBasic() . "",
+                    "App-Token: " . $this->appToken . ""
+                    );
+
+		$return = $this->curlBase($url, $cab);
+		$return = json_decode($return);
+
+		if (isset($return->session_token)) {
+			$status = 1;
+		}
+
+        $return = array("status" => $status, "msg" => $return );
+
+		return $return;
+	}
+
 
 	public function curlBase($url, $cab)
 	{

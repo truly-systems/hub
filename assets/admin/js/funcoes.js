@@ -29,4 +29,38 @@ $(function($) {
 
 	});
 
+
+	// Action Configurar
+	$("#config-btn").click(function(){ 
+
+		
+		var url = $("#url").val();
+		var token = $("#token").val();
+		var localurl = $("#localurl").val();
+		var username = $("#username").val();
+		var password = $("#password").val();
+
+		if (url == "" && token == "") {
+			// Add effect animation css
+			$('#sign-wrapper').addClass('animated shake');
+			setTimeout(function(){$('#sign-wrapper').removeClass('animated shake')}, 1500);
+		}
+		else {
+
+			$.ajax({
+			  type: "POST",
+			  url: localurl + "post.php?tipo=config",
+			  data: {'url': url, 'token': token, 'username': username, 'password': password},
+			  success: function(msg){
+
+			    $('#msgResposta').html(msg);
+			    // setTimeout(function(){ $('#testalert').fadeIn(250)}, 1500);
+			    
+			 }    
+			});
+
+	    }
+
+	});
+
 });
