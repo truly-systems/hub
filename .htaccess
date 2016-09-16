@@ -1,0 +1,15 @@
+RewriteEngine On
+
+
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+
+
+RewriteRule ^(.*)$ ?cod=$1 [L]
+RewriteCond %{HTTP_HOST} ^isistem.com.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www.isistem.com.br$
+
+

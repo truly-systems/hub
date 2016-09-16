@@ -2,6 +2,10 @@
 session_start();
 $tipo = $_GET["tipo"];
 
+
+$host = $_SERVER['HTTP_HOST'];
+if ($host == 'localhost') { $host = "$host/hub"; } else { $host = "$host"; }
+
 if ($tipo == "login") {
 
 	$username = $_POST["username"];
@@ -26,7 +30,7 @@ if ($tipo == "login") {
 			$_SESSION["session_token"] = $token;
 
 			echo "<script>$(document).ready(function() {
-					var novaURL = 'index.php';
+					var novaURL = 'http://".$host."';
 					$(window.document.location).attr('href',novaURL);
 				});</script>";
 		}

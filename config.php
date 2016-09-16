@@ -9,10 +9,14 @@ $dados_api = array(
 
 function protecao(){
 
+	$host = $_SERVER['HTTP_HOST'];
+
+	if ($host == 'localhost') { $host = "$host/hub"; } else { $host = "$host"; }
+
 	if(isset($_SESSION['session_token'])) { }
 	else
 	{ 
-		echo "<script>window.location='login.php'</script>";
+		echo "<script>window.location='http://$host/login'</script>";
 	}
 
 }

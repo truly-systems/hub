@@ -154,11 +154,16 @@ class Api
 	{
 		$ticket = json_decode($ticket);
 		$cnt = count($ticket);
-		for ($i=0; $i < $cnt; $i++) { 
-
-			$return[$i] = array("id" => $ticket[$i]->id,"name" => $ticket[$i]->name, "date_mod" => $ticket[$i]->date_mod,
-				"date_creation" => $ticket[$i]->date_creation, "status" => $ticket[$i]->status, "content" => $ticket[$i]->content);
-		}
+			
+			if ($cnt != "") {
+				for ($i=0; $i < $cnt; $i++) { 
+						$return[$i] = array("id" => $ticket[$i]->id,"name" => $ticket[$i]->name, "date_mod" => $ticket[$i]->date_mod,
+						"date_creation" => $ticket[$i]->date_creation, "status" => $ticket[$i]->status, "content" => $ticket[$i]->content);
+				}
+			}
+			else {
+				$return = [];
+			}
 
 		return $return;
 	}
