@@ -352,12 +352,13 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                     <!-- Start navigation - frontend themes -->
                     <li class="submenu">
                         <a href="javascript:void(0);">
-                            <span class="icon"><i class="fa fa-leaf"></i></span>
+                            <span class="icon"><i class="fa fa-gear"></i></span>
                             <span class="text">Configurações</span>
                             <span class="arrow"></span>
                         </a>
                         <ul>
                             <li><a href="??=dados_pessoais">Meus Dados</a></li>
+                            <li><a href="#">Meu GLPI</a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - frontend themes -->
