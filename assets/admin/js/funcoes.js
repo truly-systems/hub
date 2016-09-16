@@ -49,7 +49,7 @@ $(function($) {
 
 			$.ajax({
 			  type: "POST",
-			  url: localurl + "post.php?tipo=config",
+			  url: "../post.php?tipo=config",
 			  data: {'url': url, 'token': token, 'username': username, 'password': password},
 			  success: function(msg){
 

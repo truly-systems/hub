@@ -44,4 +44,11 @@ echo "</pre>";
 
 // 	echo "$titulo - $link <br>";
 // }
+// 
 
+echo "<pre>";
+print_r($_SERVER);
+	echo "</pre>";
+
+
+	echo __DIR__;

@@ -1,7 +1,3 @@
-<?php
-$host = $_SERVER['HTTP_HOST'];
-if ($host == 'localhost') { $host = "http://$host/hub/"; } else { $host = "http://$host/"; }
-?>
 <!DOCTYPE html>
  <html lang="en">
 
@@ -79,7 +75,7 @@ if ($host == 'localhost') { $host = "http://$host/hub/"; } else { $host = "http:
                         </div>
                     </div><!-- /.form-group -->
                   
-                   <input type="hidden" name="localurl" id="localurl" value="<?php echo $host; ?>">
+                   <input type="hidden" name="localurl" id="localurl" value="">
                 </div><!-- /.sign-body -->
                 <div class="sign-footer">
                     <div class="form-group">
