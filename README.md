@@ -10,6 +10,8 @@ Realizar o git clone do projeto:
 
 `git@github.com:truly-systems/hub.git`
 
+Entrar na URL onde foi
+
 Alterar o  arquivo `config.php` as seguintes linhas:
 
 ``````````php

@@ -28,7 +28,7 @@ class Api
 	{
 		$erro = "0";
 		$return_token = "";
-		$url = $this->host . "/apirest.php/initSession";
+		$url = $this->host . "/api/initSession";
 		$cab = array(
                     "Content-Type: application/json",
                     "Authorization: " . $this->geraAuthBasic() . "",
@@ -52,7 +52,7 @@ class Api
 
 	public function getActiveProfile($token_session)
 	{
-		$url = $this->host . "/apirest.php/getFullSession";
+		$url = $this->host . "/api/getFullSession";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -68,7 +68,7 @@ class Api
 
 	public function getMyProfiles($token_session)
 	{
-		$url = $this->host . "/apirest.php/getMyProfiles";
+		$url = $this->host . "/api/getMyProfiles";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -84,7 +84,7 @@ class Api
 
 	public function getChangeActiveProfile($token_session)
 	{
-		$url = $this->host . "/apirest.php/changeActiveProfile";
+		$url = $this->host . "/api/changeActiveProfile";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -100,7 +100,7 @@ class Api
 
 	public function getMyEntities($token_session)
 	{
-		$url = $this->host . "/apirest.php/getMyEntities";
+		$url = $this->host . "/api/getMyEntities";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -127,7 +127,7 @@ class Api
 
 	public function getFullSession($token_session)
 	{
-		$url = $this->host . "/apirest.php/getFullSession";
+		$url = $this->host . "/api/getFullSession";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -140,7 +140,7 @@ class Api
 
 	public function getTicket($token_session)
 	{
-		$url = $this->host . "/apirest.php/Ticket";
+		$url = $this->host . "/api/Ticket";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -196,7 +196,7 @@ class Api
 
 	public function getProblem($token_session)
 	{
-		$url = $this->host . "/apirest.php/Problem";
+		$url = $this->host . "/api/Problem";
 		$cab = array(
                     "Content-Type: application/json",
                     "Session-Token: " . $token_session . "",
@@ -222,7 +222,7 @@ class Api
 	{
 		$status = 0;
 
-		$url = $this->host . "/apirest.php/initSession";
+		$url = $this->host . "/api/initSession";
 		$cab = array(
                     "Content-Type: application/json",
                     "Authorization: " . $this->geraAuthBasic() . "",
