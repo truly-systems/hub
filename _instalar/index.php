@@ -56,6 +56,16 @@
                         </div>
                     </div><!-- /.form-group -->
                     <div class="form-group">
+                        <div class="input-group input-group-lg rounded no-overflow" style="width: 100%">
+                            <!-- <input type="text" class="form-control input-sm" id="tipo" placeholder="Versao API GLPI" name="tipo">
+                            <span class="input-group-addon"><i class="fa fa-link"></i></span> -->
+                            <select class="form-control" id="tipo" placeholder="Versao API GLPI" name="tipo">
+                                <option value="RC1">9 RC1 (/apirest.php)</option>
+                                <option value="RC2">9 RC2 (/api)</option>
+                            </select>
+                        </div>
+                    </div><!-- /.form-group -->
+                    <div class="form-group">
                         <div class="input-group input-group-lg rounded no-overflow">
                             <input type="text" class="form-control input-sm" id="token" placeholder="App Token" name="token">
                             <span class="input-group-addon"><i class="fa fa-user-secret"></i></span>

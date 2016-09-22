@@ -42,6 +42,7 @@ if ($tipo == "login") {
 if ($tipo == "config") {
 
 	$url = $_POST["url"];
+	$tipo = $_POST["tipo"];
 	$token = $_POST["token"];
 	$username = $_POST["username"];
 	$password = $_POST["password"];
@@ -60,9 +61,17 @@ if ($tipo == "config") {
 	}
 	else {	
 
+
+		if ($tipo == "RC1") {
+			$urlFinal = "$url/apirest.php";
+		}
+		if ($tipo == "RC2") {
+			$urlFinal = "$url/api";
+		}
+
 		echo "<div class='alert alert-warning' id='testalert'>Realizando Teste!</div>";
 		include 'src/Api.php';
-		$api = new Api($url, $token);
+		$api = new Api($urlFinal, $token);
 		$api->init($username, $password);
 		$return = $api->test();
 
@@ -90,7 +99,7 @@ if ($tipo == "config") {
 			$arquivo = "inc/config.php";
 			$fd = @fopen($arquivo, "a") or die("<div class='alert alert-danger'>Erro ao tentar configurar</div>");
 
-			$conteudo = str_replace ( '#HOST#' , $url , $conteudo );
+			$conteudo = str_replace ( '#HOST#' , $urlFinal , $conteudo );
 			$conteudo = str_replace ( '#TOKEN#' , $token , $conteudo );
 
 			@fclose ($fd);
