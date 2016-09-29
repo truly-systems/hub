@@ -122,6 +122,7 @@ if ($tipo == "config") {
 			$return =  $return["msg"][0];
 		    echo "<div class='alert alert-danger'>Erro ao tentar configurar # $return</div>";
 		}
+
 	}
 
 }

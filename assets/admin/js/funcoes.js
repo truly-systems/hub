@@ -36,6 +36,7 @@ $(function($) {
 		
 		var url = $("#url").val();
 		var token = $("#token").val();
+		var tipo = $("#tipo").val();
 		var localurl = $("#localurl").val();
 		var username = $("#username").val();
 		var password = $("#password").val();
@@ -50,7 +51,7 @@ $(function($) {
 			$.ajax({
 			  type: "POST",
 			  url: "../post.php?tipo=config",
-			  data: {'url': url, 'token': token, 'username': username, 'password': password},
+			  data: {'url': url, 'token': token, 'username': username, 'password': password, 'tipo': tipo},
 			  success: function(msg){
 
 			    $('#msgResposta').html(msg);

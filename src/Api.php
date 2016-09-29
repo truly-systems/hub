@@ -116,7 +116,7 @@ class Api
 
 	public function getActiveProfileName($return)
 	{
-		return $return->glpiactiveprofile->name;
+		return $return->session->glpiname;
 	}
 
 	public function getSessionToken($valor)
