@@ -362,7 +362,12 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                         </a>
                         <ul>
                             <li><a href="??=dados_pessoais">Meus Dados</a></li>
-                            <li><a href="#">Meu GLPI</a></li>
+
+                            <?php
+                                $hostGLPI = $dados_api["host"];
+                                $hostGLPI = substr($hostGLPI, 0, -11);
+                            ?>
+                            <li><a href="<?php echo $hostGLPI; ?>" target="_blank">Meu GLPI</a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - frontend themes -->

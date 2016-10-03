@@ -119,6 +119,11 @@ class Api
 		return $return->session->glpiname;
 	}
 
+	public function getActiveProfileDados($return)
+	{
+		return $return->session;
+	}
+
 	public function getSessionToken($valor)
 	{
 		//$valor = json_decode($valor);
