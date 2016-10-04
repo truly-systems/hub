@@ -48,7 +48,7 @@
                                             echo $api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"])));
                                         ?>
                                     </span>
-                                    Ploblemas Abertos
+                                    Problemas Abertos
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,8 @@
                 <!-- Start footer content -->
                 <footer class="footer-content">
                     <span id="tour-19">
-                        <?php echo date("Y"); ?> - <span id="copyright-year"></span> &copy; Truly. Created by <a href="http://djavaui.com/" target="_blank">Djava UI</a>, Yogyakarta ID
+                        <?php echo date("Y"); ?> - <span id="copyright-year"></span> &copy; Truly Manager. Created by <a href="http://www.trulysystems.com
+					" target="_blank">Truly Systems</a>, Full Power. Full Time
                     </span>
                     <!-- <span id="tour-20" class="pull-right">0.01 GB(0%) of 15 GB used</span> -->
                 </footer><!-- /.footer-content -->
