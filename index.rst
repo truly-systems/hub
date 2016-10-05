@@ -1,6 +1,7 @@
-# Official Documentation - Hub Truly Systems #
+
+**Official Documentation - Hub Truly Systems**
 
 Requirements:
 
-- GLPI 9.1
-- API GLPI Enabled
+* GLPI 9.1 
+* API GLPI Enabled
