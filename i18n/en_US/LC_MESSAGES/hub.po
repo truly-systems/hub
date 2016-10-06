@@ -1,0 +1,254 @@
+# English translations for PACKAGE package.
+# Copyright (C) 2016 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-06 17:29-0300\n"
+"PO-Revision-Date: 2016-10-06 17:29-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: login.php:9 index.php:39
+msgid "HUB | Truly"
+msgstr "HUB | Truly"
+
+#: login.php:47
+msgid "Hub Truly"
+msgstr "Hub Truly"
+
+#: login.php:54 _instalar/index.php:81
+msgid "Usuário"
+msgstr "User"
+
+#: login.php:60 _instalar/index.php:87
+msgid "Senha"
+msgstr "Password"
+
+#: login.php:70
+msgid "Entrar"
+msgstr "Submit"
+
+#: _home.php:6 index.php:326
+msgid "Painel"
+msgstr "Panel"
+
+#: _home.php:6 _home.php:10 index.php:331
+msgid "Início"
+msgstr "Index"
+
+#: _home.php:8
+msgid "Você está em:"
+msgstr "You are here:"
+
+#: _home.php:29
+msgid "Chamados Abertos"
+msgstr "Open Tickets"
+
+#: _home.php:38
+msgid "Mudanças Abertas"
+msgstr "Open Changes"
+
+#: _home.php:51
+msgid "Ploblemas Abertos"
+msgstr "Open Problems"
+
+#: _home.php:64
+msgid "Chamados Fechados"
+msgstr "Closed Tickets"
+
+#: _home.php:78 _home.php:129
+msgid "ID"
+msgstr "ID"
+
+#: _home.php:79 _home.php:130
+msgid "Assunto"
+msgstr "Subject"
+
+#: _home.php:80 _home.php:131
+msgid "Data Criação"
+msgstr "Creation Date"
+
+#: _home.php:81 _home.php:132
+msgid "Data Modificação"
+msgstr "Modified Date"
+
+#: _home.php:82 _home.php:133
+msgid "Texto"
+msgstr "Text"
+
+#: _home.php:83 _home.php:134
+msgid "Status"
+msgstr "Status"
+
+#: _home.php:113
+msgid "Nenhum dado cadastrado"
+msgstr "No data registered"
+
+#: _home.php:158
+msgid "Sobre a Truly"
+msgstr "About Truly"
+
+#: _home.php:177
+msgid "Atendimento"
+msgstr "Attendance"
+
+#: _home.php:198
+msgid "Created by"
+msgstr "Created by"
+
+#: _dados_pessoais.php:12
+msgid "Perfil"
+msgstr "Profile"
+
+#: _dados_pessoais.php:12
+msgid "dados pessoais"
+msgstr "Personal Data"
+
+#: _dados_pessoais.php:14
+msgid "Você está aqui:"
+msgstr "You are here:"
+
+#: _dados_pessoais.php:18
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: _dados_pessoais.php:22
+msgid "Página"
+msgstr "Page"
+
+#: _dados_pessoais.php:25
+msgid "Dados Pessoais"
+msgstr "Personal Data"
+
+#: _dados_pessoais.php:59 index.php:259
+msgid "Sair"
+msgstr "Logout"
+
+#: _dados_pessoais.php:71
+msgid "Dados"
+msgstr "Data"
+
+#: _dados_pessoais.php:78
+msgid "Nome"
+msgstr "Name"
+
+#: _dados_pessoais.php:79
+msgid "Nome Real"
+msgstr "Real Name"
+
+#: _dados_pessoais.php:80
+msgid "Primeiro Nome"
+msgstr "First Name"
+
+#: _dados_pessoais.php:89
+msgid "Perfil Ativo"
+msgstr "Active Profile"
+
+#: funcoes.php:37
+msgid "Processando (atribuído)"
+msgstr "Processing (assigned)"
+
+#: funcoes.php:40
+msgid "Processando (planejado)"
+msgstr "Processing (planned)"
+
+#: funcoes.php:43
+msgid "Pendente"
+msgstr "Pending"
+
+#: funcoes.php:46
+msgid "Solucionado"
+msgstr "Solved"
+
+#: funcoes.php:49
+msgid "Fechado"
+msgstr "Closed"
+
+#: ORIGINAL/php-gettext-1.0.12/examples/pigs_dropin.php:77
+msgid ""
+"This is how the story goes.\n"
+"\n"
+msgstr ""
+"This is how the story goes.\n"
+"\n"
+
+#: _instalar/index.php:13
+msgid "[INSTALAR] HUB | Truly"
+msgstr "[INSTALAR] HUB | Truly"
+
+#: _instalar/index.php:51
+msgid "[INSTALAR] Hub Truly"
+msgstr "[INSTALAR] Hub Truly"
+
+#: _instalar/index.php:74
+msgid "App Token"
+msgstr "App Token"
+
+#: _instalar/index.php:99
+msgid "Configurar"
+msgstr "Configure"
+
+#: index.php:213
+msgid "Novas"
+msgstr "New"
+
+#: index.php:233
+msgid "Visualizar Todos"
+msgstr "View All"
+
+#: index.php:305
+msgid "Olá,"
+msgstr "Hello,"
+
+#: index.php:340
+msgid "Configurações"
+msgstr "Configuration"
+
+#: index.php:344
+msgid "Meus Dados"
+msgstr "My data"
+
+#: index.php:350
+msgid "Meu GLPI"
+msgstr "My GLPI"
+
+#: post.php:15 post.php:60
+msgid "Usuário em Branco!"
+msgstr "Empty User"
+
+#: post.php:18 post.php:63
+msgid "Senha em Branco!"
+msgstr "Empty Password"
+
+#: post.php:39
+msgid "Login Inváldo!"
+msgstr "Invalid login!"
+
+#: post.php:54
+msgid "Url em Branco!"
+msgstr "Empty URL!"
+
+#: post.php:57
+msgid "Token em Branco!"
+msgstr "Empty Token!"
+
+#: post.php:75
+msgid "Realizando Teste!"
+msgstr "Performing Test!"
+
+#: post.php:86
+msgid "Configurado com sucesso! \\n Redirecionando ..."
+msgstr "Set up successfully! \\n Redirecting ..."
+
+#: post.php:126
+msgid "Erro ao tentar configurar #"
+msgstr "Error while trying to set #"

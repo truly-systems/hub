@@ -1,3 +1,7 @@
+<?php
+require_once('lang.php');
+require_once('i18n.php');
+?>
 <!DOCTYPE html>
  <html lang="en">
 
@@ -6,7 +10,7 @@
         <!-- START @META SECTION -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-         <title>HUB | Truly</title>
+         <title><?php echo __('HUB | Truly'); ?></title>
 
         <!-- START @GLOBAL MANDATORY STYLES -->
         <link href="assets/global/plugins/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,20 +48,20 @@
                 <div class="sign-header">
                     <div class="form-group">
                         <div class="sign-text">
-                            <span>Hub Truly</span>
+                            <span><?php echo __('Hub Truly'); ?></span>
                         </div>
                     </div><!-- /.form-group -->
                 </div><!-- /.sign-header -->
                 <div class="sign-body">
                     <div class="form-group">
                         <div class="input-group input-group-lg rounded no-overflow">
-                            <input type="text" class="form-control input-sm" id="username" placeholder="Usuário" name="username">
+                            <input type="text" class="form-control input-sm" id="username" placeholder="<?php echo __('Usuário'); ?>" name="username">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         </div>
                     </div><!-- /.form-group -->
                     <div class="form-group">
                         <div class="input-group input-group-lg rounded no-overflow">
-                            <input type="password" class="form-control input-sm" id="password" placeholder="Senha" name="password">
+                            <input type="password" class="form-control input-sm" id="password" placeholder="<?php echo __('Senha'); ?>" name="password">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                         </div>
                     </div><!-- /.form-group -->
@@ -67,7 +71,7 @@
                         
                     </div><!-- /.form-group -->
                     <div class="form-group">
-                        <button type="submit" class="btn btn-theme btn-lg btn-block no-margin rounded" id="login-btn">Entrar</button>
+                        <button type="submit" class="btn btn-theme btn-lg btn-block no-margin rounded" id="login-btn"><?php echo __('Entrar'); ?></button>
 
                         <div id="msgResposta" style="margin-top:5px;"></div>
 

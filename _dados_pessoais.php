@@ -9,20 +9,20 @@
 
                 <!-- Start page header -->
                 <div class="header-content">
-                    <h2><i class="fa fa-male"></i> Perfil <span>dados pessoais</span></h2>
+                    <h2><i class="fa fa-male"></i> <?php echo __('Perfil'); ?> <span><?php echo __('dados pessoais'); ?></span></h2>
                     <div class="breadcrumb-wrapper hidden-xs">
-                        <span class="label">Você está aqui:</span>
+                        <span class="label"><?php echo __('Você está aqui:'); ?></span>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-home"></i>
-                                <a href="index.php">Dashboard</a>
+                                <a href="index.php"><?php echo __('Dashboard'); ?></a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="#">Página</a>
+                                <a href="#"><?php echo __('Página'); ?></a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
-                            <li class="active">Dados Pessoais</li>
+                            <li class="active"><?php echo __('Dados Pessoais') ?></li>
                         </ol>
                     </div><!-- /.breadcrumb-wrapper -->
                 </div><!-- /.header-content -->
@@ -56,7 +56,7 @@
                                         <li>
                                             <div class="btn-group-vertical btn-block">
                                                 <!-- <a href="" class="btn btn-default"><i class="fa fa-cog pull-right"></i>Edit Account</a> -->
-                                                <a href="index.php?action=sair" class="btn btn-default"><i class="fa fa-sign-out pull-right"></i>Sair</a>
+                                                <a href="index.php?action=sair" class="btn btn-default"><i class="fa fa-sign-out pull-right"></i><?php echo __('Sair'); ?></a>
                                             </div>
                                         </li>
                                     </ul>
@@ -68,16 +68,16 @@
                         <div class="panel panel-theme rounded shadow">
                             <div class="panel-heading">
                                 <div class="pull-left">
-                                    <h3 class="panel-title">Dados</h3>
+                                    <h3 class="panel-title"><?php echo __('Dados'); ?></h3>
                                 </div>
                               
                                 <div class="clearfix"></div>
                             </div><!-- /.panel-heading -->
                             <div class="panel-body no-padding rounded">
                                 <ul class="list-group no-margin">
-                                    <li class="list-group-item">Nome: <b><?php echo $todos->glpiname; ?></b></li>
-                                    <li class="list-group-item">Nome Real: <b><?php echo $todos->glpirealname; ?></b></li>
-                                    <li class="list-group-item">Primeiro Nome: <b><?php echo $todos->glpifirstname; ?></b></li>
+                                    <li class="list-group-item"><?php echo __('Nome'); ?>: <b><?php echo $todos->glpiname; ?></b></li>
+                                    <li class="list-group-item"><?php echo __('Nome Real'); ?>: <b><?php echo $todos->glpirealname; ?></b></li>
+                                    <li class="list-group-item"><?php echo __('Primeiro Nome'); ?>: <b><?php echo $todos->glpifirstname; ?></b></li>
                                 </ul>
                             </div><!-- /.panel-body -->
                         </div><!-- /.panel -->
@@ -86,7 +86,7 @@
                         <div class="panel panel-theme rounded shadow">
                             <div class="panel-heading">
                                 <div class="pull-left">
-                                    <h3 class="panel-title">Perfil Ativo </h3>
+                                    <h3 class="panel-title"><?php echo __('Perfil Ativo'); ?> </h3>
                                 </div>
                               
                                 <div class="clearfix"></div>

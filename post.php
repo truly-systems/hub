@@ -2,6 +2,9 @@
 session_start();
 $tipo = $_GET["tipo"];
 
+require_once('lang.php');
+require_once('i18n.php');
+
 
 if ($tipo == "login") {
 
@@ -9,10 +12,10 @@ if ($tipo == "login") {
 	$password = $_POST["password"];
 
 	if($username == ""){
-		echo "<div class='alert alert-danger'>Usuário em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Usuário em Branco!') ."</div>";
 	}
 	elseif($password == ""){
-		echo "<div class='alert alert-danger'>Senha em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Senha em Branco!') ."</div>";
 	}
 	else {	
 
@@ -33,7 +36,7 @@ if ($tipo == "login") {
 				});</script>";
 		}
 		else{
-		    echo "<div class='alert alert-danger'>Login Inváldo!</div>";
+		    echo "<div class='alert alert-danger'>" . __('Login Inváldo!') ."</div>";
 	    }
 	}
 }
@@ -48,16 +51,16 @@ if ($tipo == "config") {
 	$password = $_POST["password"];
 
 	if($url == ""){
-		echo "<div class='alert alert-danger'>Url em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Url em Branco!') ."</div>";
 	}
 	elseif($token == ""){
-		echo "<div class='alert alert-danger'>Token em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Token em Branco!') ."</div>";
 	}
 	elseif($username == ""){
-		echo "<div class='alert alert-danger'>Usuário em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Usuário em Branco!') ."</div>";
 	}
 	elseif($password == ""){
-		echo "<div class='alert alert-danger'>Senha em Branco!</div>";
+		echo "<div class='alert alert-danger'>" . __('Senha em Branco!') ."</div>";
 	}
 	else {	
 
@@ -69,7 +72,7 @@ if ($tipo == "config") {
 			$urlFinal = "$url/api";
 		}
 
-		echo "<div class='alert alert-warning' id='testalert'>Realizando Teste!</div>";
+		echo "<div class='alert alert-warning' id='testalert'>" . __('Realizando Teste!') ."</div>";
 		include 'src/Api.php';
 		$api = new Api($urlFinal, $token);
 		$api->init($username, $password);
@@ -80,12 +83,10 @@ if ($tipo == "config") {
 			       setTimeout(function(){ $('#testalert').fadeOut()}, 1500);
 							});</script>";
 
-			echo "<div class='alert alert-success'>Configurado com sucesso! \n Redirecionando ...</div>";
+			echo "<div class='alert alert-success'>" . __('Configurado com sucesso! \n Redirecionando ...') ."</div>";
 
 			// Cria o arquivo config.php
 			$conteudo = "<?php
-
-			define(\"LANG\",'en_US');
 
 			\$dados_api = array(
 					\"host\" => \"#HOST#\",
@@ -120,7 +121,7 @@ if ($tipo == "config") {
 			            setTimeout(function(){ $('#testalert').fadeOut()}, 1500);
 							});</script>";
 			$return =  $return["msg"][0];
-		    echo "<div class='alert alert-danger'>Erro ao tentar configurar # $return</div>";
+		    echo "<div class='alert alert-danger'>" . __('Erro ao tentar configurar #') ."</div>";
 		}
 
 	}

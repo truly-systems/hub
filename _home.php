@@ -3,11 +3,11 @@
 
                 <!-- Start page header -->
                 <div id="tour-11" class="header-content">
-                    <h2><i class="fa fa-home"></i>Painel <span>Início</span></h2>
+                    <h2><i class="fa fa-home"></i><?php echo __('Painel'); ?> <span><?php echo __('Início'); ?></span></h2>
                     <div class="breadcrumb-wrapper hidden-xs">
-                        <span class="label">Você está em:</span>
+                        <span class="label"><?php echo __('Você está em:'); ?></span>
                         <ol class="breadcrumb">
-                            <li class="active">Início</li>
+                            <li class="active"><?php echo __('Início'); ?></li>
                         </ol>
                     </div>
                 </div><!-- /.header-content -->
@@ -26,7 +26,7 @@
                                             echo $api->countTicketOpen(json_decode($api->getTicket($_SESSION["session_token"])));
                                         ?>
                                     </span>
-                                    Chamados Abertos
+                                    <?php echo __('Chamados Abertos'); ?>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <span class="mini-stat-icon"><i class="fa fa-bullhorn fg-twitter"></i></span>
                                 <div class="mini-stat-info">
                                     <span class="counter">0</span>
-                                    Mudanças Abertas
+                                    <?php echo __('Mudanças Abertas'); ?>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                                             echo $api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"])));
                                         ?>
                                     </span>
-                                    Ploblemas Abertos
+                                    <?php echo __('Ploblemas Abertos'); ?>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                             echo $api->countTicketClose(json_decode($api->getTicket($_SESSION["session_token"])));
                                         ?>
                                     </span>
-                                    Chamados Fechados
+                                    <?php echo __('Chamados Fechados'); ?>
                                 </div>
                             </div>
                         </div>
@@ -75,12 +75,12 @@
                                 <table id="tour-16" class="table table-striped table-theme">
                                     <thead>
                                     <tr>
-                                        <th class="text-center border-right">ID</th>
-                                        <th>Assunto</th>
-                                        <th>Data Criação</th>
-                                        <th>Data Modificação</th>
-                                        <th class="text-center">Texto</th>
-                                        <th class="text-center">Status</th>
+                                        <th class="text-center border-right"><?php echo __('ID'); ?></th>
+                                        <th><?php echo __('Assunto'); ?></th>
+                                        <th><?php echo __('Data Criação'); ?></th>
+                                        <th><?php echo __('Data Modificação'); ?></th>
+                                        <th class="text-center"><?php echo __('Texto'); ?></th>
+                                        <th class="text-center"><?php echo __('Status'); ?></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -110,7 +110,10 @@
                                             echo "<tr>
                                                         <td class='text-center border-right'></td>
                                                         <td>
-                                                            <span>Nenhum dado cadastrado</span>
+                                                            <span>";
+                                            echo __('Nenhum dado cadastrado');
+
+                                            echo "</span>
                                                         </td>
                                                         <td></td>
                                                         <td></td>
@@ -126,12 +129,12 @@
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <th class="text-center border-right">ID</th>
-                                        <th>Assunto</th>
-                                        <th>Data Criação</th>
-                                        <th>Data Modificação</th>
-                                        <th class="text-center">Texto</th>
-                                        <th class="text-center">Status</th>
+                                        <th class="text-center border-right"><?php echo __('ID'); ?></th>
+                                        <th><?php echo __('Assunto'); ?></th>
+                                        <th><?php echo __('Data Criação'); ?></th>
+                                        <th><?php echo __('Data Modificação'); ?></th>
+                                        <th class="text-center"><?php echo __('Texto'); ?></th>
+                                        <th class="text-center"><?php echo __('Status'); ?></th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -154,7 +157,9 @@
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
                                                 <!-- <span class="block counter">342</span> -->
-                                                <span class="block"><a href="http://trulysystems.com/tsys/sobre-a-truly/" target="_blank">Sobre a Truly</a></span>
+                                                <span class="block">
+                                                <a href="http://trulysystems.com/tsys/sobre-a-truly/" target="_blank"><?php echo __('Sobre a Truly'); ?></a>
+                                                </span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
@@ -171,7 +176,9 @@
                                         <div class="panel-body text-center">
                                             <p class="h4 no-margin inner-all text-strong">
                                                 <!-- <span class="block counter">2,341</span> -->
-                                                <span class="block"><a href="http://tm.trulysystems.com" target="_blank">Atendimento</a></span>
+                                                <span class="block">
+                                                <a href="http://tm.trulysystems.com" target="_blank"><?php echo __('Atendimento'); ?></a>
+                                                </span>
                                             </p>
                                         </div><!-- /.panel-body -->
                                     </div><!-- /.panel -->
@@ -191,7 +198,7 @@
                 <!-- Start footer content -->
                 <footer class="footer-content">
                     <span id="tour-19">
-                        <?php echo date("Y"); ?> - <span id="copyright-year"></span> &copy; Truly. Created by <a href="http://djavaui.com/" target="_blank">Djava UI</a>, Yogyakarta ID
+                        <?php echo date("Y"); ?> - <span id="copyright-year"></span> &copy; Truly. <?php echo __('Created by'); ?> <a href="http://djavaui.com/" target="_blank">Djava UI</a>, Yogyakarta ID
                     </span>
                     <!-- <span id="tour-20" class="pull-right">0.01 GB(0%) of 15 GB used</span> -->
                 </footer><!-- /.footer-content -->

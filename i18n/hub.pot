@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-06 17:29-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: login.php:9 index.php:39
+msgid "HUB | Truly"
+msgstr ""
+
+#: login.php:47
+msgid "Hub Truly"
+msgstr ""
+
+#: login.php:54 _instalar/index.php:81
+msgid "Usuário"
+msgstr ""
+
+#: login.php:60 _instalar/index.php:87
+msgid "Senha"
+msgstr ""
+
+#: login.php:70
+msgid "Entrar"
+msgstr ""
+
+#: _home.php:6 index.php:326
+msgid "Painel"
+msgstr ""
+
+#: _home.php:6 _home.php:10 index.php:331
+msgid "Início"
+msgstr ""
+
+#: _home.php:8
+msgid "Você está em:"
+msgstr ""
+
+#: _home.php:29
+msgid "Chamados Abertos"
+msgstr ""
+
+#: _home.php:38
+msgid "Mudanças Abertas"
+msgstr ""
+
+#: _home.php:51
+msgid "Ploblemas Abertos"
+msgstr ""
+
+#: _home.php:64
+msgid "Chamados Fechados"
+msgstr ""
+
+#: _home.php:78 _home.php:129
+msgid "ID"
+msgstr ""
+
+#: _home.php:79 _home.php:130
+msgid "Assunto"
+msgstr ""
+
+#: _home.php:80 _home.php:131
+msgid "Data Criação"
+msgstr ""
+
+#: _home.php:81 _home.php:132
+msgid "Data Modificação"
+msgstr ""
+
+#: _home.php:82 _home.php:133
+msgid "Texto"
+msgstr ""
+
+#: _home.php:83 _home.php:134
+msgid "Status"
+msgstr ""
+
+#: _home.php:113
+msgid "Nenhum dado cadastrado"
+msgstr ""
+
+#: _home.php:158
+msgid "Sobre a Truly"
+msgstr ""
+
+#: _home.php:177
+msgid "Atendimento"
+msgstr ""
+
+#: _home.php:198
+msgid "Created by"
+msgstr ""
+
+#: _dados_pessoais.php:12
+msgid "Perfil"
+msgstr ""
+
+#: _dados_pessoais.php:12
+msgid "dados pessoais"
+msgstr ""
+
+#: _dados_pessoais.php:14
+msgid "Você está aqui:"
+msgstr ""
+
+#: _dados_pessoais.php:18
+msgid "Dashboard"
+msgstr ""
+
+#: _dados_pessoais.php:22
+msgid "Página"
+msgstr ""
+
+#: _dados_pessoais.php:25
+msgid "Dados Pessoais"
+msgstr ""
+
+#: _dados_pessoais.php:59 index.php:259
+msgid "Sair"
+msgstr ""
+
+#: _dados_pessoais.php:71
+msgid "Dados"
+msgstr ""
+
+#: _dados_pessoais.php:78
+msgid "Nome"
+msgstr ""
+
+#: _dados_pessoais.php:79
+msgid "Nome Real"
+msgstr ""
+
+#: _dados_pessoais.php:80
+msgid "Primeiro Nome"
+msgstr ""
+
+#: _dados_pessoais.php:89
+msgid "Perfil Ativo"
+msgstr ""
+
+#: funcoes.php:37
+msgid "Processando (atribuído)"
+msgstr ""
+
+#: funcoes.php:40
+msgid "Processando (planejado)"
+msgstr ""
+
+#: funcoes.php:43
+msgid "Pendente"
+msgstr ""
+
+#: funcoes.php:46
+msgid "Solucionado"
+msgstr ""
+
+#: funcoes.php:49
+msgid "Fechado"
+msgstr ""
+
+#: ORIGINAL/php-gettext-1.0.12/examples/pigs_dropin.php:77
+msgid ""
+"This is how the story goes.\n"
+"\n"
+msgstr ""
+
+#: _instalar/index.php:13
+msgid "[INSTALAR] HUB | Truly"
+msgstr ""
+
+#: _instalar/index.php:51
+msgid "[INSTALAR] Hub Truly"
+msgstr ""
+
+#: _instalar/index.php:74
+msgid "App Token"
+msgstr ""
+
+#: _instalar/index.php:99
+msgid "Configurar"
+msgstr ""
+
+#: index.php:213
+msgid "Novas"
+msgstr ""
+
+#: index.php:233
+msgid "Visualizar Todos"
+msgstr ""
+
+#: index.php:305
+msgid "Olá,"
+msgstr ""
+
+#: index.php:340
+msgid "Configurações"
+msgstr ""
+
+#: index.php:344
+msgid "Meus Dados"
+msgstr ""
+
+#: index.php:350
+msgid "Meu GLPI"
+msgstr ""
+
+#: post.php:15 post.php:60
+msgid "Usuário em Branco!"
+msgstr ""
+
+#: post.php:18 post.php:63
+msgid "Senha em Branco!"
+msgstr ""
+
+#: post.php:39
+msgid "Login Inváldo!"
+msgstr ""
+
+#: post.php:54
+msgid "Url em Branco!"
+msgstr ""
+
+#: post.php:57
+msgid "Token em Branco!"
+msgstr ""
+
+#: post.php:75
+msgid "Realizando Teste!"
+msgstr ""
+
+#: post.php:86
+msgid "Configurado com sucesso! \\n Redirecionando ..."
+msgstr ""
+
+#: post.php:126
+msgid "Erro ao tentar configurar #"
+msgstr ""

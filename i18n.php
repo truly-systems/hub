@@ -1,7 +1,7 @@
 <?php
-require 'config.php';
+require 'lang.php';
 
-$locale = LANG;
+$locale = "pt_BR";
 $textdomain = "hub";
 $locales_dir = dirname(__FILE__) . '/i18n';
 

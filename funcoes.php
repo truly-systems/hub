@@ -1,4 +1,7 @@
 <?php
+require_once('lang.php');
+require_once('i18n.php');
+
 function protecao()
 {
 
@@ -31,19 +34,19 @@ function casesStatus($status)
 	        $ticket = "<span class='label label-primary'>Novo</span>";
 	        break;
 	    case '2':
-	        $ticket = "<span class='label label-warning'>Processando (atribuído)</span>";
+	        $ticket = "<span class='label label-warning'>" . __('Processando (atribuído)') ."</span>";
 	        break;
 	    case '3':
-	        $ticket = "<span class='label label-warning'>Processando (planejado)</span>";
+	        $ticket = "<span class='label label-warning'>" . __('Processando (planejado)') ."</span>";
 	        break;
 	    case '4':
-	        $ticket = "<span class='label label-danger'>Pendente</span>";
+	        $ticket = "<span class='label label-danger'>" . __('Pendente') ."</span>";
 	        break;
 	    case '5':
-	        $ticket = "<span class='label label-success'>Solucionado</span>";
+	        $ticket = "<span class='label label-success'>" . __('Solucionado') ."</span>";
 	        break;
 	    case '6':
-	        $ticket = "<span class='label label-default'>Fechado</span>";
+	        $ticket = "<span class='label label-default'>" . __('Fechado') ."</span>";
 	        break;
 	    default:
 	        $ticket = "<span class='label label-primary'>---</span>";

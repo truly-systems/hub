@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+require_once('lang.php');
+require_once('i18n.php');
+
 
 include 'funcoes.php';
 checkInstall();
@@ -33,7 +36,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
        
-        <title>HUB | Truly</title>
+        <title><?php echo __('HUB | Truly'); ?></title>
         <!--/ END META SECTION -->
 
         <!-- START @FAVICONS -->
@@ -207,7 +210,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             <!-- Start dropdown menu -->
                             <div class="dropdown-menu animated flipInX">
                                 <div class="dropdown-header">
-                                    <span class="title">Novas <strong class="countRssOne"></strong></span>
+                                    <span class="title"><?php echo __('Novas'); ?> <strong class="countRssOne"></strong></span>
                                 </div>
                                 <div class="dropdown-body">
 
@@ -227,7 +230,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
                                 </div>
                                 <div class="dropdown-footer">
-                                    <a href="http://trulymanager.com/v1/feed/">Visualizar Todos</a>
+                                    <a href="http://trulymanager.com/v1/feed/"><?php echo __('Visualizar Todos'); ?></a>
                                 </div>
                             </div>
                             <!--/ End dropdown menu -->
@@ -253,7 +256,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             </a>
                             <!-- Start dropdown menu -->
                             <ul class="dropdown-menu animated flipInX">
-                                <li><a href="index.php?action=sair"><i class="fa fa-sign-out"></i>Sair</a></li>
+                                <li><a href="index.php?action=sair"><i class="fa fa-sign-out"></i><?php echo __('Sair'); ?></a></li>
                             </ul>
                             <!--/ End dropdown menu -->
                         </li><!-- /.dropdown navbar-profile -->
@@ -299,7 +302,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                             <!-- <i class="online"></i> -->
                         </a>
                         <div class="media-body">
-                            <h4 class="media-heading">Olá, 
+                            <h4 class="media-heading"><?php echo __('Olá,'); ?> 
                             <span>
                                 <?php
                                     $result = $api->getActiveProfile($_SESSION["session_token"]);
@@ -320,12 +323,12 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                     <li class="submenu active">
                         <a href="javascript:void(0);">
                             <span class="icon"><i class="fa fa-home"></i></span>
-                            <span class="text">Painel</span>
+                            <span class="text"><?php echo __('Painel'); ?></span>
                             <span class="arrow"></span>
                             <span class="selected"></span>
                         </a>
                         <ul>
-                            <li class="active"><a href="index.php">Início</a></li>
+                            <li class="active"><a href="index.php"><?php echo __('Início'); ?></a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - dashboard -->
@@ -334,17 +337,17 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                     <li class="submenu">
                         <a href="javascript:void(0);">
                             <span class="icon"><i class="fa fa-gear"></i></span>
-                            <span class="text">Configurações</span>
+                            <span class="text"><?php echo __('Configurações'); ?></span>
                             <span class="arrow"></span>
                         </a>
                         <ul>
-                            <li><a href="??=dados_pessoais">Meus Dados</a></li>
+                            <li><a href="??=dados_pessoais"><?php echo __('Meus Dados'); ?></a></li>
 
                             <?php
                                 $hostGLPI = $dados_api["host"];
                                 $hostGLPI = substr($hostGLPI, 0, -11);
                             ?>
-                            <li><a href="<?php echo $hostGLPI; ?>" target="_blank">Meu GLPI</a></li>
+                            <li><a href="<?php echo $hostGLPI; ?>" target="_blank"><?php echo __('Meu GLPI'); ?></a></li>
                         </ul>
                     </li>
                     <!--/ End navigation - frontend themes -->
