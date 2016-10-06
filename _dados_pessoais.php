@@ -15,14 +15,14 @@
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-home"></i>
-                                <a href="dashboard.html">Dashboard</a>
+                                <a href="index.php">Dashboard</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
                                 <a href="#">Página</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
-                            <li class="active">Perfil</li>
+                            <li class="active">Dados Pessoais</li>
                         </ol>
                     </div><!-- /.breadcrumb-wrapper -->
                 </div><!-- /.header-content -->

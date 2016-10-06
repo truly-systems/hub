@@ -93,7 +93,7 @@
         <!--/ END CORE PLUGINS -->
 
         <!-- START @PAGE LEVEL PLUGINS -->
-        <script src="assets/global/plugins/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+        <!-- <script src="assets/global/plugins/bower_components/jquery-validation/dist/jquery.validate.min.js"></script> -->
         <!--/ END PAGE LEVEL PLUGINS -->
 
         <!-- START @PAGE LEVEL SCRIPTS -->

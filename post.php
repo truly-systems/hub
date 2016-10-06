@@ -126,3 +126,29 @@ if ($tipo == "config") {
 	}
 
 }
+
+if ($tipo == "loadRss") {
+  
+  $countRss = 0;
+  $conteudo = "";
+
+  $feed = file_get_contents("http://trulymanager.com/v1/feed/");
+  $rss = new SimpleXmlElement($feed);
+  $countRss = count($rss);
+
+  if($countRss > 0){
+		  foreach($rss->channel->item as $entrada) {
+		     $titulo = $entrada->title;
+		     $link = $entrada->link;
+
+		     $conteudo .= "<a href=\"$link\" class=\"media\"><div class=\"media-body\"><span class=\"media-text\">$titulo</span></div></a>";
+
+		  }
+  }
+
+  echo "<script>
+	$('.countRssOne').html($countRss);
+	$('#conteudoRss').html('$conteudo');
+</script>";
+
+}

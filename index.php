@@ -58,7 +58,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <link href="assets/global/plugins/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="assets/global/plugins/bower_components/dropzone/downloads/css/dropzone.css" rel="stylesheet">
         <link href="assets/global/plugins/bower_components/jquery.gritter/css/jquery.gritter.css" rel="stylesheet">
-        <link href="assets/global/plugins/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
+        <!-- <link href="assets/global/plugins/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet"> -->
         <!--/ END PAGE LEVEL STYLES -->
 
         <!-- START @THEME STYLES -->
@@ -121,7 +121,6 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
 	-->
     <body class="page-session page-sound page-header-fixed page-sidebar-fixed demo-dashboard-session">
-
         <!--[if lt IE 9]>
         <p class="upgrade-browser">Upps!! You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -199,18 +198,16 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
 
                         <!-- Start messages -->
                         <li id="tour-4" class="dropdown navbar-message">
-                            <?php
-                                $feed = file_get_contents("http://trulymanager.com/v1/feed/");
-                                $rss = new SimpleXmlElement($feed);
-                                $countRss = count($rss);
-                            ?>
 
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span class="count label label-danger rounded"><?php echo $countRss; ?></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="count label label-danger rounded countRssOne" ></span>
+                            </a>
 
                             <!-- Start dropdown menu -->
                             <div class="dropdown-menu animated flipInX">
                                 <div class="dropdown-header">
-                                    <span class="title">Novas <strong>(<?php echo $countRss; ?>)</strong></span>
+                                    <span class="title">Novas <strong class="countRssOne"></strong></span>
                                 </div>
                                 <div class="dropdown-body">
 
@@ -224,27 +221,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
                                     <!--/ End message search -->
 
                                     <!-- Start message list -->
-                                    <div class="media-list niceScroll">
-
-                                        <?php
-
-                                            foreach($rss->channel->item as $entrada) {
-                                             $titulo = $entrada->title;
-                                             $link = $entrada->link;
-
-                                             echo "
-                                             <a href='$link' class='media'>
-                                              
-                                                 <div class='media-body'>
-                                                     <span class='media-text'>$titulo</span>
-                                                 </div><!-- /.media-body -->
-                                             </a><!-- /.media -->";
-
-                                            }
-                                        ?>
-
-                                        
-
+                                    <div class="media-list niceScroll" id="conteudoRss">
                                     </div>
                                     <!--/ End message list -->
 
@@ -410,7 +387,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         </div><!-- /#back-top -->
         <!--/ END BACK TOP -->
 
-    
+        <div id="msgResposta"></div>
 
         <!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
         <!-- START @CORE PLUGINS -->
@@ -427,7 +404,7 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <!--/ END CORE PLUGINS -->
 
         <!-- START @PAGE LEVEL PLUGINS -->
-        <script src="assets/global/plugins/bower_components/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"></script>
+        <!-- <script src="assets/global/plugins/bower_components/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"></script>
         <script src="assets/global/plugins/bower_components/flot/jquery.flot.js"></script>
         <script src="assets/global/plugins/bower_components/flot/jquery.flot.spline.min.js"></script>
         <script src="assets/global/plugins/bower_components/flot/jquery.flot.categories.js"></script>
@@ -438,16 +415,19 @@ $api = new Api($dados_api["host"], $dados_api["app_token"]);
         <script src="assets/global/plugins/bower_components/jquery.gritter/js/jquery.gritter.min.js"></script>
         <script src="assets/global/plugins/bower_components/skycons-html5/skycons.js"></script>
         <script src="assets/global/plugins/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="assets/global/plugins/bower_components/counter-up/jquery.counterup.min.js"></script>
-        <script src="assets/global/plugins/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+        <script src="assets/global/plugins/bower_components/counter-up/jquery.counterup.min.js"></script> -->
+
         <!--/ END PAGE LEVEL PLUGINS -->
 
         <!-- START @PAGE LEVEL SCRIPTS -->
         <script src="assets/admin/js/apps.js"></script>
         <script src="assets/admin/js/pages/blankon.dashboard.js"></script>
         <script src="assets/admin/js/demo.js"></script>
+        <script src="assets/admin/js/funcoes.js"></script>
         <!--/ END PAGE LEVEL SCRIPTS -->
         <!--/ END JAVASCRIPT SECTION --> 
+
+
     </body>
     <!--/ END BODY -->
 

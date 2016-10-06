@@ -26,10 +26,10 @@ print_r($token_session);
 // //  print_r(json_decode($api->getProblem($_SESSION["session_token"])));
 // // print_r($api->countProblemOpen(json_decode($api->getProblem($_SESSION["session_token"]))));
 
-//print_r(json_decode($api->getTicket($token_session)));
+print_r(json_decode($api->getTicket($token_session)));
 //print_r($api->getTicketsContent($api->getTicket($_SESSION["session_token"])));
 
- print_r($api->getActiveProfile($token_session));
+// print_r($api->getActiveProfile($token_session));
 // echo "------------";
 // print_r($api->getActiveProfileName($api->getActiveProfile($token_session)));
 

@@ -1,4 +1,20 @@
+$(document).ready(function() {
+			$.ajax({
+	  type: "POST",
+	  url: "post.php?tipo=loadRss",
+	  data: { 'tipo': '0'} ,
+	  success: function(msg){
+
+	    $('#msgResposta').html(msg);
+
+	 }    
+	});
+
+});
+
+
 $(function($) {
+
 
 	// Action Login
 	$("#login-btn").click(function(){ 
