@@ -1,13 +1,22 @@
 <?php
 require 'lang.php';
 
+
 $locale = "pt_BR";
 $textdomain = "hub";
 $locales_dir = dirname(__FILE__) . '/i18n';
 
-if (isset($_GET['locale']) && !empty($_GET['locale']))
-  $locale = $_GET['locale'];
- 
+if (isset($_SESSION["lang"])) {
+		$locale = $_SESSION["lang"];
+}
+
+
+// if (isset($_GET['locale']) && !empty($_GET['locale']) and !isset($_SESSION["lang"]))
+// {
+//   $locale = $_GET['locale'];
+//   $_SESSION["lang"] = $locale;
+// }
+
 putenv('LANGUAGE=' . $locale);
 putenv('LANG=' . $locale);
 putenv('LC_ALL=' . $locale);

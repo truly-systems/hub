@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (isset($_GET['locale']) && !empty($_GET['locale']))
+{
+  $_SESSION["lang"] = $_GET['locale'];
+}
+
 require_once('lang.php');
 require_once('i18n.php');
 ?>
@@ -65,6 +72,16 @@ require_once('i18n.php');
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                         </div>
                     </div><!-- /.form-group -->
+
+                    <div class="form-group">
+                        <div class="rounded no-overflow">
+                            <select id="lang" name="lang" class="form-control">
+                                <option value="en_US">Inglês</option>
+                                <option value="pt_BR">Português Brasil</option>
+                            </select>
+                        </div>
+                    </div><!-- /.form-group -->
+
                 </div><!-- /.sign-body -->
                 <div class="sign-footer">
                     <div class="form-group">

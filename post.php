@@ -5,11 +5,13 @@ $tipo = $_GET["tipo"];
 require_once('lang.php');
 require_once('i18n.php');
 
-
 if ($tipo == "login") {
+
+	
 
 	$username = $_POST["username"];
 	$password = $_POST["password"];
+	$lang = $_POST["lang"];
 
 	if($username == ""){
 		echo "<div class='alert alert-danger'>" . __('Usuário em Branco!') ."</div>";
@@ -30,6 +32,8 @@ if ($tipo == "login") {
 			$token = $return["session_token"];
 			$_SESSION["session_token"] = $token;
 
+			$_SESSION["lang"] = $lang;
+
 			echo "<script>$(document).ready(function() {
 					var novaURL = 'index.php';
 					$(window.document.location).attr('href',novaURL);
@@ -43,6 +47,7 @@ if ($tipo == "login") {
 
 
 if ($tipo == "config") {
+
 
 	$url = $_POST["url"];
 	$tipo = $_POST["tipo"];

@@ -22,6 +22,7 @@ $(function($) {
 		
 		var username = $("#username").val();
 		var password = $("#password").val();
+		var lang = $("#lang").val();
 
 		if (username == "" && password == "") {
 			// Add effect animation css
@@ -33,7 +34,7 @@ $(function($) {
 			$.ajax({
 			  type: "POST",
 			  url: "post.php?tipo=login",
-			  data: {'username': username, 'password': password},
+			  data: {'username': username, 'password': password, 'lang': lang},
 			  success: function(msg){
 
 			    $('#msgResposta').html(msg);
