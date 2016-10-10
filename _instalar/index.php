@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+if (isset($_GET['locale']) && !empty($_GET['locale']))
+{
+  $_SESSION["lang"] = $_GET['locale'];
+}
+
+
 require_once('../i18n.php');
 ?>
 <!DOCTYPE html>
